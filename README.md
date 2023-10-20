@@ -20,4 +20,4 @@ Through the seamless integration of blockchain technology, Aquilier not only emp
 ## Documentation Index
 
 1. [Components](doc/component.md)
-2. [architecture map](doc/architecture.md)
+2. [Architecture map](doc/architecture.md)

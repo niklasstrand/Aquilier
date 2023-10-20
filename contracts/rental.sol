@@ -3,13 +3,14 @@ pragma solidity ^0.8.0;
 
 contract Rental{
 
-    struct Participant {
+    struct User {
         address walletAddress;
         string name;
         string phone;
         string email;
         string physicalAddress;
         bool isOwner;
+        bool isRenter;
     }
     
     struct Property {
@@ -20,7 +21,7 @@ contract Rental{
         bool isAvailable;
     }
     
-    mapping(address => Participant) public participants;
+    mapping(address => User) public users;
     mapping(uint256 => Property) public properties;
     
     uint256 public nextPropertyId;
@@ -33,7 +34,7 @@ contract Rental{
     );
 
     modifier onlyOwner() {
-        require(participants[msg.sender].isOwner, "Not an owner");
+        require(users[msg.sender].isOwner, "Not an owner");
         _;
     }
     
@@ -42,9 +43,10 @@ contract Rental{
         string memory _phone,
         string memory _email,
         string memory _physicalAddress,
-        bool _isOwner
+        bool _isOwner,
+        bool _isRenter
     ) public {
-        participants[msg.sender] = Participant(msg.sender, _name, _phone, _email, _physicalAddress, _isOwner);
+        users[msg.sender] = User(msg.sender, _name, _phone, _email, _physicalAddress, _isOwner, _isRenter);
     }
     
     function createProperty(

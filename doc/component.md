@@ -1,4 +1,4 @@
-# Rental Platform Smart Contract Documentation
+# Smart Contract Documentation
 
 ## 1. Contract Data
 
