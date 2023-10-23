@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "auth",
+  "data": {
+    "users": [
+      {
+        "id": "b74c2bec3da84269902540d07f47ff51",
+        "group_ids": [
+          "system-read-only"
+        ],
+        "is_owner": false,
+        "is_active": true,
+        "name": "Home Assistant Content",
+        "system_generated": true,
+        "local_only": false
+      },
+      {
+        "id": "6103b6c98c844b0686de6850c7c5d1ad",
+        "group_ids": [
+          "system-admin"
+        ],
+        "is_owner": true,
+        "is_active": true,
+        "name": "Niklas Strand",
+        "system_generated": false,
+        "local_only": false
+      }
+    ],
+    "groups": [
+      {
+        "id": "system-admin",
+        "name": "Administrators"
+      },
+      {
+        "id": "system-users",
+        "name": "Users"
+      },
+      {
+        "id": "system-read-only",
+        "name": "Read Only"
+      }
+    ],
+    "credentials": [
+      {
+        "id": "d0372f91419f4d81924c2fb859014506",
+        "user_id": "6103b6c98c844b0686de6850c7c5d1ad",
+        "auth_provider_type": "homeassistant",
+        "auth_provider_id": null,
+        "data": {
+          "username": "niklas"
+        }
+      }
+    ],
+    "refresh_tokens": [
+      {
+        "id": "3a181d4b0a884508a1b87f6b1b730ea5",
+        "user_id": "b74c2bec3da84269902540d07f47ff51",
+        "client_id": null,
+        "client_name": null,
+        "client_icon": null,
+        "token_type": "system",
+        "created_at": "2023-10-23T10:06:31.747145+00:00",
+        "access_token_expiration": 1800.0,
+        "token": "2bb3828f2c665f57661abf5b6cb8e92b2a0b00df92cdf4ca10f85dc23625d5360b3fb38d8c931ba8625a2e1c0f06ddf9a6eb24ffbf5f8fa9df70915f10f727df",
+        "jwt_key": "c1f27bca8fc4a96ede6a1fe8ddffeb1f59e976fc66babe5f16205f35ecfddc04456a818e756bd09734c3389f5c012e7304a20a3b63107926c8b3e91380f887fd",
+        "last_used_at": null,
+        "last_used_ip": null,
+        "credential_id": null,
+        "version": "2023.10.5"
+      },
+      {
+        "id": "29067467386541f79609170a1e52216d",
+        "user_id": "6103b6c98c844b0686de6850c7c5d1ad",
+        "client_id": "http://localhost:8123/",
+        "client_name": null,
+        "client_icon": null,
+        "token_type": "normal",
+        "created_at": "2023-10-23T10:10:50.413109+00:00",
+        "access_token_expiration": 1800.0,
+        "token": "0237033df399ea998be4bfaf92e3ecca7e14ce4ecf8f6f8ced289a55d2b43878fd27f88bb5f2b493461a653db9a828f8cb1b16b2be97c56dab66ad0e96c3523c",
+        "jwt_key": "317a5dec049f96ae6dfad9ab536c6fecc0fbb85252fbc733b4fa5a9b41f77440781fc3f43e5ef6342df32f4a47f25be8fda294f560f357081a19c86365516ed8",
+        "last_used_at": "2023-10-23T10:10:50.413180+00:00",
+        "last_used_ip": "::1",
+        "credential_id": "d0372f91419f4d81924c2fb859014506",
+        "version": "2023.10.5"
+      },
+      {
+        "id": "53ff61dc051a4dc4a387201f41f414fb",
+        "user_id": "6103b6c98c844b0686de6850c7c5d1ad",
+        "client_id": null,
+        "client_name": "VirtualLock",
+        "client_icon": null,
+        "token_type": "long_lived_access_token",
+        "created_at": "2023-10-23T11:45:50.718042+00:00",
+        "access_token_expiration": 315360000.0,
+        "token": "21323f2c94aaabf17f63e222e6017c4a0f3df02b9dea926fee26aaac7a7ee330d0ddc89a50cf06be1eea035fcc5c7e05b14c86a61e16fab99d169b084b77a756",
+        "jwt_key": "bdf67cc1b0aa05916e6e6065c6bd41d3fa08323912fe780e058bcefece445f289c2de4f4823c89928008fc19652544ecc4d32cd7c8b7c823d2c4b407e859f6e8",
+        "last_used_at": "2023-10-23T11:45:50.718135+00:00",
+        "last_used_ip": null,
+        "credential_id": null,
+        "version": "2023.10.5"
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace",
+  "data": {
+    "config": {
+      "title": "Home",
+      "views": [
+        {
+          "path": "default_view",
+          "title": "Home",
+          "cards": [
+            {
+              "type": "entities",
+              "entities": [
+                "input_boolean.virtual_lock"
+              ],
+              "title": "Virtual Lock"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                "person.niklas_strand"
+              ]
+            },
+            {
+              "type": "weather-forecast",
+              "entity": "weather.forecast_home",
+              "show_forecast": false
+            },
+            {
+              "type": "entities",
+              "entities": [
+                "input_boolean.virtual_lock"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
