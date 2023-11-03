@@ -1,33 +1,38 @@
-import Web3 from 'web3';
 import axios from 'axios';
-import { Contract } from 'web3-eth-contract';
-
-// Import the ABI
 import bookingManagementABI from '../contract/BookingManagement.abi.json';
 
+// Import necessary types and classes from web3
+import { Web3 } from 'web3'; 
+import { Contract } from 'web3-eth-contract';
+
 // 1. Setup web3 provider
-const web3 = new Web3(new Web3.providers.WebsocketProvider('ws://localhost:7545')); // assuming Ganache is running on this endpoint
+const web3 = new Web3(new Web3.providers.WebsocketProvider('ws://localhost:7545')); 
+web3.eth.net.isListening()
+  .then(() => console.log('Connected to the Ethereum node'))
+  .catch(e => console.error('Failed connecting to the Ethereum node', e));
 
-
+  (async () => {
+    const accounts = await web3.eth.getAccounts();
+    console.log("First account balance:", await web3.eth.getBalance(accounts[0]));
+})();
 // 3. Address of the deployed BookingManagement contract
-const bookingManagementAddress = '0xa0C5BD86c0494C121ff180A15542481964B9b0A2';
+const bookingManagementAddress = '0x167fF147960Cb1b8481c89A13efF156584C54426';
 
 // 4. Create a contract instance
 const bookingManagementContract = new web3.eth.Contract(bookingManagementABI, bookingManagementAddress);
 
 // 5. Listen to the BookingApproved event
 
+bookingManagementContract.events.AccessGranted({
+    fromBlock: 'earliest'  // start listening from the latest block
+})
+.on('data', (event) => {
+    console.log('Access Granted:', event);
+    const bookingId = event.returnValues.bookingId;
+    const userAddress = event.returnValues.userAddress;
+    unlockVirtualLock()
+})
 
-(bookingManagementContract.events.BookingApproved as any)({})
-    .once('data', (event: any) => {
-        console.log('Booking approved detected:', event);
-        unlockVirtualLock().catch(err => {
-            console.error('Error unlocking virtual lock:', err);
-        });
-    })
-    .once('error', (error: any) => {
-        console.error('Error on event:', error);
-    });
 
 async function unlockVirtualLock() {
     // Replace with your Home Assistant API endpoint and token
@@ -52,4 +57,3 @@ async function unlockVirtualLock() {
         console.error('Error unlocking virtual lock:', error);
     }
 }
-

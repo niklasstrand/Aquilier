@@ -1,6 +1,6 @@
 const Rental = artifacts.require("Rental");
 const IdentityManagement = artifacts.require("IdentityManagement");
-const truffleAssert = require('truffle-assertions');
+
 
 contract("Rental", (accounts) => {
 
