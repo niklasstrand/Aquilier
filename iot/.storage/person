@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "minor_version": 1,
+  "key": "person",
+  "data": {
+    "items": [
+      {
+        "id": "niklas_strand",
+        "name": "Niklas Strand",
+        "user_id": "6103b6c98c844b0686de6850c7c5d1ad",
+        "device_trackers": []
+      }
+    ]
+  }
+}

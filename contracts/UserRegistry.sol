@@ -2,7 +2,49 @@
 pragma solidity ^0.8.0;
 
 // A contract to manage the identity of tenants.
-contract IdentityManagement {
+contract UserRegistry {
+
+    struct User {
+        address userAddress;
+        string name;
+        string phone;
+        string email;
+        string physicalAddress;
+        bytes32 did;  
+    }
+    
+    mapping(address => User) public users;
+
+    function getMyUserDetails() public view returns (User memory) {
+        return users[msg.sender];
+    }
+function addUser(
+    string memory _name,
+    string memory _phone,
+    string memory _email,
+    string memory _physicalAddress
+
+) public {
+    bytes32 _did = keccak256(abi.encodePacked(msg.sender));
+
+    _addUserInternal(_name, _phone, _email, _physicalAddress, _did);
+}
+
+
+// Internal function to handle user addition
+function _addUserInternal(
+    string memory _name,
+    string memory _phone,
+    string memory _email,
+    string memory _physicalAddress,
+    bytes32 _did
+) internal {
+    // Adding user to the UserManagement contract
+    users[msg.sender] = User(msg.sender, _name, _phone, _email, _physicalAddress, _did);
+    
+    // Registering DID to the IdentityManagement contract
+    // identityManagement.registerTenant(_did);
+}
 
     // Tenant struct to hold the Decentralized Identifier (DID) and Verifiable Credential (VC) of a tenant.
     struct Tenant {

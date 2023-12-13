@@ -1,0 +1,27 @@
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+input_boolean:
+  virtual_lock:
+    name: "Virtual Lock"
+    initial: off
+sensor:
+  - platform: template
+    sensors:
+      custom_virtual_lock:
+        friendly_name: "Custom Virtual Lock"
+        value_template: >
+          {% if is_state('input_boolean.virtual_lock', 'on') %}
+            Locked
+          {% else %}
+            Open
+          {% endif %}
