@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - ganache
+
+  ganache:
+    image: trufflesuite/ganache-cli
+    command: ganache-cli --host 0.0.0.0 --port 7545 --accounts 10 --defaultBalanceEther 1000
+    ports:
+      - "7545:7545"
