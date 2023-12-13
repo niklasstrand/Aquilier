@@ -15,13 +15,21 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  height: 40px; /* or the thickness you want for your border */
+  top: 0;
+}
+
+
+/* Since the header is now just a border, you don't need extra padding on the main content */
+main {
+  padding-top: 0;
 }
 
 .App-link {
@@ -36,3 +44,5 @@
     transform: rotate(360deg);
   }
 }
+
+

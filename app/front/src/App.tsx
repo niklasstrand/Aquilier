@@ -1,6 +1,8 @@
-
-import './App.css'; // Optional, if you are using a CSS file for styling
-import LandingPage from './views/LandingPage';
+import React from 'react';
+import './App.css'; // Ensure this contains all the styles you need
+import MetaMaskLogin from './components/MetaMaskLogin';
+import UserComponent from './components/UserRegestry';
+import PropertyManagement from './components/PropertyManagment';
 
 function App() {
   return (
@@ -9,9 +11,14 @@ function App() {
         <h1>Aquilier</h1>
       </header>
       <main>
-        <LandingPage/>
+        <h2>Welcome to the Rental Platform</h2>
+        <p>Explore and list properties for rent on the blockchain.</p>
+        <MetaMaskLogin />
+        <UserComponent />
+        <PropertyManagement />
       </main>
     </div>
   );
 }
+
 export default App;

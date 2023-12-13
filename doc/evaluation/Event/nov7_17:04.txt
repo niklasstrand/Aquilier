@@ -1,0 +1,39 @@
+Contract: BookingManagement
+    - should allow a user to create a booking
+    - should allow the user to cancel their booking
+Before grantAccess this is booking id:  BN { negative: 0, words: [ 0, <1 empty item> ], length: 1, red: null }
+Access_receipt:  {
+  tx: '0x368f3ab1c6f15b08c27ffe7ff9aa74f327099ffdcd7115aa103a1094af65cf42',
+  receipt: {
+    transactionHash: '0x368f3ab1c6f15b08c27ffe7ff9aa74f327099ffdcd7115aa103a1094af65cf42',
+    transactionIndex: 0,
+    blockNumber: 1785,
+    blockHash: '0x6cb012ce0b67ff76dcce9f51c6480f1c5ddbffeb46c60e5db421420fcdb63bf5',
+    from: '0xbe045a665d96b60edd36826782aab670ef49dead',
+    to: '0x1c9c62ef6ed2cee8322600761935bd204bea62d9',
+    cumulativeGasUsed: 27682,
+    gasUsed: 27682,
+    contractAddress: null,
+    logs: [ [Object] ],
+    logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000001000000000000020000000000000000000800000000000040100000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000060000000000020000000000000000000000000000000000000000000000000000000',
+    status: true,
+    effectiveGasPrice: 2500000008,
+    type: '0x2',
+    rawLogs: [ [Object] ]
+  },
+  logs: [
+    {
+      address: '0x1C9c62EF6ED2CEE8322600761935bd204beA62d9',
+      blockHash: '0x6cb012ce0b67ff76dcce9f51c6480f1c5ddbffeb46c60e5db421420fcdb63bf5',
+      blockNumber: 1785,
+      logIndex: 0,
+      removed: false,
+      transactionHash: '0x368f3ab1c6f15b08c27ffe7ff9aa74f327099ffdcd7115aa103a1094af65cf42',
+      transactionIndex: 0,
+      id: 'log_a52915ed',
+      event: 'AccessGranted',
+      args: [Result]
+    }
+  ]
+}
+    ✔ should grant access when the booking is currently valid

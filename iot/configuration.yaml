@@ -14,3 +14,14 @@ input_boolean:
   virtual_lock:
     name: "Virtual Lock"
     initial: off
+sensor:
+  - platform: template
+    sensors:
+      custom_virtual_lock:
+        friendly_name: "Custom Virtual Lock"
+        value_template: >
+          {% if is_state('input_boolean.virtual_lock', 'on') %}
+            Locked
+          {% else %}
+            Open
+          {% endif %}

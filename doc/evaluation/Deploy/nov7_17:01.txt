@@ -1,0 +1,122 @@
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+Starting migrations...
+======================
+> Network name:    'development'
+> Network id:      1337
+> Block gas limit: 6721975 (0x6691b7)
+
+
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0x8e3914932dee74c20eba9cf57e8235a617e45f105945665af67995a7390f5dd4
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x56324D15900aC63b99544ED92238Ab5418C6830d
+   > block number:        1766
+   > block timestamp:     1699376386
+   > account:             0x6881E29F9A7cA91276B93486d053Ddd7B89Fb694
+   > balance:             98.154528118498729744
+   > gas used:            274088 (0x42ea8)
+   > gas price:           2.500000008 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000685220002192704 ETH
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.000685220002192704 ETH
+
+
+3_deploy_UserRegistry.js
+========================
+
+   Replacing 'UserRegistry'
+   ------------------------
+   > transaction hash:    0xd584929448b660a576fa45b0b250479c28aeb3cba73798a6a3adf0b58f87de0d
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xf1886b5670E9abB2acB008c7bEA0fb12A83a5A60
+   > block number:        1768
+   > block timestamp:     1699376386
+   > account:             0x6881E29F9A7cA91276B93486d053Ddd7B89Fb694
+   > balance:             98.151789015989964616
+   > gas used:            1049706 (0x10046a)
+   > gas price:           2.500000008 gwei
+   > value sent:          0 ETH
+   > total cost:          0.002624265008397648 ETH
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.002624265008397648 ETH
+
+
+4_deploy_propertymanager.js
+===========================
+
+   Replacing 'UserRegistry'
+   ------------------------
+   > transaction hash:    0x5dfaeaf4ca0d19ada9c25d4e5cd6e79b8a16e532178650a800d9a8ab9e019031
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x0B24dCdD772E3Ae9C88Ee409C44De0381F290776
+   > block number:        1770
+   > block timestamp:     1699376386
+   > account:             0x6881E29F9A7cA91276B93486d053Ddd7B89Fb694
+   > balance:             98.149092663481336288
+   > gas used:            1049706 (0x10046a)
+   > gas price:           2.500000008 gwei
+   > value sent:          0 ETH
+   > total cost:          0.002624265008397648 ETH
+
+
+   Replacing 'PropertyManager'
+   ---------------------------
+   > transaction hash:    0x3cef1cae4a0d6bc977151fde6495dae6cac527b181816ca9b9b40b7e53246d88
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x8D4d940226282a98A113e78C283798a586E5D1CA
+   > block number:        1771
+   > block timestamp:     1699376386
+   > account:             0x6881E29F9A7cA91276B93486d053Ddd7B89Fb694
+   > balance:             98.147453520976091032
+   > gas used:            655657 (0xa0129)
+   > gas price:           2.500000008 gwei
+   > value sent:          0 ETH
+   > total cost:          0.001639142505245256 ETH
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.004263407513642904 ETH
+
+
+5_deploy_bookingmanagement.js
+=============================
+
+   Replacing 'BookingManagement'
+   -----------------------------
+   > transaction hash:    0x4c854a2a64f104adaebe8b78b5cc3d0a61b892de2589f58218e7ce36020ea418
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xd8c9f98e5B1A8D3031EFbcf892B86cA1a0a614b4
+   > block number:        1773
+   > block timestamp:     1699376386
+   > account:             0x6881E29F9A7cA91276B93486d053Ddd7B89Fb694
+   > balance:             98.145799915970799496
+   > gas used:            632607 (0x9a71f)
+   > gas price:           2.500000008 gwei
+   > value sent:          0 ETH
+   > total cost:          0.001581517505060856 ETH
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.001581517505060856 ETH
+
+Summary
+=======
+> Total deployments:   5
+> Final cost:          0.009154410029294112 ETH

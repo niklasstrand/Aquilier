@@ -16,7 +16,7 @@ contract BookingManagement {
 
     event BookingCreated(uint256 indexed bookingId, uint256 indexed propertyId, address indexed userAddress);
     event BookingCancelled(uint256 indexed bookingId);
-    event AccessGranted(uint256 indexed bookingId, address indexed userAddress);
+    event AccessGranted(uint256 indexed bookingId, address indexed userAddress, uint256 indexed propertyId);
 
     function createBooking(uint256 _propertyId, uint256 _startDate, uint256 _endDate) public returns(uint256) {
         require(_startDate < _endDate, "Invalid booking dates");
@@ -39,8 +39,7 @@ contract BookingManagement {
     function grantAccess(uint256 _bookingId) public {
         require(bookings[_bookingId].isActive, "Booking is not active");
         require(block.timestamp >= bookings[_bookingId].startDate && block.timestamp <= bookings[_bookingId].endDate, "Booking is not currently valid");
-        
-        emit AccessGranted(_bookingId, bookings[_bookingId].userAddress);
+        emit AccessGranted(_bookingId, bookings[_bookingId].userAddress, bookings[_bookingId].propertyId);
     }
 
     function checkBookingStatus(uint256 _bookingId) public view returns(bool) {
