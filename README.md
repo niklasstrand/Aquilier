@@ -1,8 +1,49 @@
-# Aquilier Documentation
+# Aquilier
 
-Welcome to the documentation for **Aquilier**, a fundamental component of the associated master thesis. Aquilier is a decentralized application (DApp) designed to streamline and secure property booking for accommodation, leveraging the immutable and decentralized nature of blockchain technology.
+Welcome to Aquilier, a decentralized application (DApp) designed for property booking on the blockchain. This application is part of a master thesis exploring the integration of blockchain technology in real estate.
 
 ## Overview
+
+Aquilier leverages blockchain technology to provide a secure and transparent platform for property bookings. Users can list their properties for rent and manage bookings through a user-friendly interface while ensuring data integrity and trust through smart contract implementation.
+
+## Features
+
+- Property Listing: Users can list their properties with details such as location, rate, and availability.
+- MetaMask Integration: Secure login and transaction signing with MetaMask.
+- Smart Contract Interaction: Direct interaction with Ethereum smart contracts for booking and management.
+
+## Getting Started
+
+Follow the steps below to get started with Aquilier:
+
+### Prerequisites
+
+Before running the application, make sure you have the following installed:
+
+- Node.js
+- npm (Node Package Manager)
+
+### Installation
+
+To set up the project on your local machine:
+
+1. Clone the repository:
+
+To run the frontend: 
+
+```bash
+git clone [repository-url]
+cd aquilier/app/front
+npm install
+npm install web3
+```
+
+To run the proxy: 
+```bash
+git clone [repository-url]
+cd aquilier/app/backend/oracle
+go run proxy.go
+```
 
 Aquilier seeks to establish a direct, secure, and transparent conduit between property owners and renters by facilitating an agreed-upon smart contract. The primary objective is to explore and showcase how blockchain systems can ensure unerring access to a property for a rightful tenant based on the parameters set and agreed upon within the smart contract.
 
