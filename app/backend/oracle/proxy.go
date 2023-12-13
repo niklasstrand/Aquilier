@@ -19,7 +19,7 @@ import (
 )
 
 const (
-	abiPath             = "/home/niklas/Documents/aquilier/app/backend/contract/BookingManagement.abi.json"
+	abiPath             = "../contract/BookingManagement.abi.json" //"/home/niklas/Documents/aquilier/app/backend/contract/BookingManagement.abi.json"
 	infuraURL           = "https://sepolia.infura.io/v3/8568dcbfcab044ffa3d0ab39952981b5"
 	infuraWsUrl         = "wss://sepolia.infura.io/ws/v3/8568dcbfcab044ffa3d0ab39952981b5"
 	SepoliaContract     = "0x4BBD5B6e419C1bAF43ba2e8319eb7aa8Fd252245"
