@@ -106,18 +106,34 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to load contract ABI: %v", err)
 	}
-	go EventSubscriber(contractABI, ganacheURL, ganacheContract)
-	go EventSubscriber(contractABI, infuraWsUrl, SepoliaContract)
-	// Prevent the main thread from exiting
+	// Error channel
+	errChan := make(chan error, 2) // Buffer for two potential errors
+
+	// Start a single goroutine for both subscribers
+	go func() {
+		if err := EventSubscriber(contractABI, ganacheURL, ganacheContract); err != nil {
+			errChan <- err
+		}
+		if err := EventSubscriber(contractABI, infuraWsUrl, SepoliaContract); err != nil {
+			errChan <- err
+		}
+		close(errChan) // Close channel after both subscribers are done
+	}()
+
+	// Handle errors from the goroutine
+	for err := range errChan {
+		log.Printf("Error in event subscription: %v", err)
+		// Handle the error, e.g., perform cleanup, retry, or exit
+	}
 	select {}
 }
 
-func EventSubscriber(contractABI abi.ABI, WsUrl string, ContractAddrHex string) {
+func EventSubscriber(contractABI abi.ABI, WsUrl string, ContractAddrHex string) error {
 	// Setup Infura WebSocket client
 
 	client, err := ethclient.Dial(WsUrl)
 	if err != nil {
-		log.Fatalf("Failed to connect to the Infura WebSocket Ethereum client: %v", err)
+		return fmt.Errorf("failed to connect to the WebSocket Ethereum client: %v", err)
 	}
 	// Create filter query
 	contractAddress := common.HexToAddress(SepoliaContract)
@@ -126,6 +142,7 @@ func EventSubscriber(contractABI abi.ABI, WsUrl string, ContractAddrHex string) 
 
 	// Setup event subscription for Infura
 	subscribeToEvents(client, query, contractABI)
+	return nil // No error occurred
 }
 
 func loadABI(path string) (bookingManagementABIString string) {
