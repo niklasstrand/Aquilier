@@ -33,6 +33,12 @@
               "entities": [
                 "input_boolean.virtual_lock"
               ]
+            },
+            {
+              "type": "entities",
+              "entities": [
+                "sensor.custom_virtual_lock"
+              ]
             }
           ]
         }

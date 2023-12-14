@@ -23,42 +23,36 @@ Before running the application, make sure you have the following installed:
 - Node.js
 - npm (Node Package Manager)
 
+- Docker and Docker Compose should be installed on your system.
+- Ensure you have cloned the Aquilier repository or have access to the necessary files.
+
 ### Installation
 
 To set up the project on your local machine:
 
 1. Clone the repository:
 
-To run the frontend: 
-
+### To run the frontend: 
 ```bash
-git clone [repository-url]
 cd aquilier/app/front
 npm install
 npm install web3
+npm start
 ```
 
-To run the proxy: 
+### To run the proxy: 
 ```bash
-git clone [repository-url]
-cd aquilier/app/backend/oracle
-go run proxy.go
+cd Aquilier/app/backend/proxy/
+docker build -t aqilier .
+docker run -p 8080:8080 aqilier
 ```
 
-Aquilier seeks to establish a direct, secure, and transparent conduit between property owners and renters by facilitating an agreed-upon smart contract. The primary objective is to explore and showcase how blockchain systems can ensure unerring access to a property for a rightful tenant based on the parameters set and agreed upon within the smart contract.
-
-### Focus Areas
-
-- **Smart Contract Enforcement:** Enabling property access to tenants based on the verifiable and self-executing smart contracts agreed upon between the renter and the property owner.
-  
-- **Decentralization:** Minimizing the need for intermediaries by facilitating direct interactions between renters and property owners in a decentralized manner.
-
-- **Security and Trust:** Ensuring secure and trustworthy transactions and agreements between parties through the inherent characteristics of blockchain.
-
-Through the seamless integration of blockchain technology, Aquilier not only emphasizes secure and transparent transactions but also explores the multifaceted utilities of smart contracts in real-world applications, specifically in the realm of property rental and management.
+### To run the Home assistant: 
+```bash
+cd iot/
+docker-compose up -d
+```
 
 
-## Documentation Index
-
-1. [Components](doc/component.md)
-2. [Architecture map](doc/architecture.md)
+Navigate to http://localhost:8123/ 
+login using our test user niklas and password 123secret

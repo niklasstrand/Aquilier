@@ -18,6 +18,13 @@
             "should_expose": false
           }
         }
+      },
+      "sensor.custom_virtual_lock": {
+        "assistants": {
+          "conversation": {
+            "should_expose": false
+          }
+        }
       }
     }
   }

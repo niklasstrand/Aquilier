@@ -5,25 +5,6 @@
   "data": [
     {
       "state": {
-        "entity_id": "input_boolean.virtual_lock",
-        "state": "off",
-        "attributes": {
-          "editable": false,
-          "friendly_name": "Virtual Lock"
-        },
-        "last_changed": "2023-10-23T11:51:33.391152+00:00",
-        "last_updated": "2023-10-23T11:51:33.391152+00:00",
-        "context": {
-          "id": "01HDE60FRE501GT6AT54NW3M2H",
-          "parent_id": null,
-          "user_id": "6103b6c98c844b0686de6850c7c5d1ad"
-        }
-      },
-      "extra_data": null,
-      "last_seen": "2023-10-23T12:08:16.725557+00:00"
-    },
-    {
-      "state": {
         "entity_id": "person.niklas_strand",
         "state": "unknown",
         "attributes": {
@@ -33,16 +14,35 @@
           "device_trackers": [],
           "friendly_name": "Niklas Strand"
         },
-        "last_changed": "2023-10-23T10:09:42.029580+00:00",
-        "last_updated": "2023-10-23T10:09:42.029580+00:00",
+        "last_changed": "2023-12-04T17:55:17.834909+00:00",
+        "last_updated": "2023-12-04T17:55:19.408824+00:00",
         "context": {
-          "id": "01HDE05ZMD8DTYRM3NJ9RA8MWG",
+          "id": "01HGTZGR7GNVGG2FGTF5AVGM57",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": null,
-      "last_seen": "2023-10-23T12:08:16.725557+00:00"
+      "last_seen": "2023-12-14T06:42:39.347659+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "input_boolean.virtual_lock",
+        "state": "off",
+        "attributes": {
+          "editable": false,
+          "friendly_name": "Virtual Lock"
+        },
+        "last_changed": "2023-12-04T17:55:18.655815+00:00",
+        "last_updated": "2023-12-04T17:55:18.655815+00:00",
+        "context": {
+          "id": "01HGTZGQFZDY694JTWCMPQXM8N",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-12-14T06:42:39.347659+00:00"
     },
     {
       "state": {
@@ -51,16 +51,16 @@
         "attributes": {
           "friendly_name": "Google en com"
         },
-        "last_changed": "2023-10-23T10:10:44.389321+00:00",
-        "last_updated": "2023-10-23T10:10:44.389321+00:00",
+        "last_changed": "2023-12-04T17:55:19.104932+00:00",
+        "last_updated": "2023-12-04T17:55:19.104932+00:00",
         "context": {
-          "id": "01HDE07WH57A7P9PYTX9CNQZ5P",
+          "id": "01HGTZGQY04834FD6F7MYG56BG",
           "parent_id": null,
           "user_id": null
         }
       },
       "extra_data": null,
-      "last_seen": "2023-10-23T12:08:16.725557+00:00"
+      "last_seen": "2023-12-14T06:42:39.347659+00:00"
     }
   ]
 }
